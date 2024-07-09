@@ -42,7 +42,7 @@ const YDound = () => {
           value={videoUrl}
           onChange={(e) => setVideoUrl(e.target.value)}
           placeholder="Enter YouTube Video URL"
-          className="w-full p-2 border border-gray-300 rounded mb-4"
+          className="w-full p-2 border-2 border-gray-300  hover:border-stone-800 rounded mb-4"
         />
         {thumbnailUrl && (
           <div className="mb-4">
@@ -65,7 +65,7 @@ const YDound = () => {
             className="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
           >
             Download Thumbnail 
-            
+             
           </button>
         )}
       </div>
