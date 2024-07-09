@@ -22,17 +22,29 @@ const YDound = () => {
 
   const downloadThumbnail = async () => {
     if (!thumbnailUrl) return;
-    const response = await fetch(thumbnailUrl);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'thumbnail.jpg';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    
+    try {
+      const response = await fetch(thumbnailUrl);
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'thumbnail.jpg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Failed to download thumbnail:', error);
+      alert('Failed to download thumbnail. Please try again later.');
+    }
   };
+  
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
       <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
