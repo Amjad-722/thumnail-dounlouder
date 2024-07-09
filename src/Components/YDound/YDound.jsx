@@ -33,7 +33,6 @@ const YDound = () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
       <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
@@ -65,7 +64,8 @@ const YDound = () => {
             onClick={downloadThumbnail}
             className="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
           >
-            Download Thumbnail  123
+            Download Thumbnail 
+            
           </button>
         )}
       </div>
