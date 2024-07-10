@@ -19,30 +19,19 @@ const YDound = () => {
       alert('Invalid YouTube URL');
     }
   };
-
-  const downloadThumbnail = async () => {
-    if (!thumbnailUrl) return;
-    
-    try {
-      const response = await fetch(thumbnailUrl);
-  
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-  
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'thumbnail.jpg';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Failed to download thumbnail:', error);
-      alert('Failed to download thumbnail. Please try again later.');
-    }
+  const downloadThumbnail = () => {
+     // The image URL you want to download
+    const imageURL = thumbnailUrl;
+    // Create an anchor element
+    const link = document.createElement('a');
+    link.href = imageURL;
+    link.download = 'downloaded_image.jpg'; // The name of the downloaded file
+    // Append the anchor to the body
+    document.body.appendChild(link);
+    // Programmatically click the anchor
+    link.click();
+    // Remove the anchor from the document
+    document.body.removeChild(link);
   };
   
   return (
