@@ -35,15 +35,15 @@ const YDound = () => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-700 p-4">
-      <div className="bg-red-200 shadow-md rounded-lg p-6 max-w-md w-full">
+    <div className="min-h-screen flex flex-col items-center bg-purple-800 justify-center p-4">
+      <div className="bg-red-200 flex flex-col shadow-md w-3/5 rounded-lg p-6 ">
         <h1 className="text-2xl text-blue-700 font-bold mb-4 text-center">YouTube Thumbnail Downloader</h1>
         <input
           type="text"
           value={videoUrl}
           onChange={(e) => setVideoUrl(e.target.value)}
           placeholder="Enter YouTube Video URL"
-          className="w-full p-2 border-2 border-gray-300  hover:border-stone-800 rounded mb-4"
+          className=" p-2 border-2 border-gray-300  hover:border-stone-800 rounded mb-4"
         />
         {thumbnailUrl && (
           <div className="mb-4">
@@ -56,7 +56,7 @@ const YDound = () => {
         )}
         <button
           onClick={getThumbnail}
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 mb-2"
+          className="bg-gradient-to-r from-blue-500 to-red-500 text-white px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate"
         >
           Get Thumbnail
         </button>
