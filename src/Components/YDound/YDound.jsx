@@ -20,24 +20,24 @@ const YDound = () => {
     }
   };
   const downloadThumbnail = () => {
-     // The image URL you want to download
+     
     const imageURL = thumbnailUrl;
-    // Create an anchor element
+    
     const link = document.createElement('a');
     link.href = imageURL;
-    link.download = 'downloaded_image.jpg'; // The name of the downloaded file
-    // Append the anchor to the body
+    link.download = 'downloaded_image.jpg'; 
+ 
     document.body.appendChild(link);
-    // Programmatically click the anchor
+    
     link.click();
-    // Remove the anchor from the document
+   
     document.body.removeChild(link);
   };
   
   return (
-    <div className="min-h-screen flex flex-col items-center bg-purple-800 justify-center p-4">
-      <div className="bg-red-200 flex flex-col shadow-md w-3/5 rounded-lg p-6 ">
-        <h1 className="text-2xl text-blue-700 font-bold mb-4 text-center">YouTube Thumbnail Downloader</h1>
+    <div className="min-h-screen flex flex-col items-center  bg-purple-800 justify-center p-4">
+      <div className="bg-red-200 flex justify-center items-center flex-col bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  shadow-md w-3/5 rounded-lg p-6 ">
+        <h1 className="text-2xl text-black font-extrabold  mb-4 text-center">YouTube Thumbnail Downloader</h1>
         <input
           type="text"
           value={videoUrl}
@@ -61,13 +61,13 @@ const YDound = () => {
           Get Thumbnail
         </button>
         {thumbnailUrl && (
-          <button
-            onClick={downloadThumbnail}
-            className="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
-          >
-            Download Thumbnail 
-             
-          </button>
+         <button
+         onClick={downloadThumbnail}
+         class="relative text-[15px] px-[2.7em] py-[0.7em] tracking-[0.06em] font-inherit rounded-[0.6em] bg-black overflow-hidden transition-all duration-300 leading-[1.4em] border-2 border-[#1BFD9C] text-[#1BFD9C] bg-gradient-to-r from-[rgba(27,253,156,0.1)] via-transparent to-[rgba(27,253,156,0.1)] shadow-inner shadow-[inset_0_0_10px_rgba(27,253,156,0.4),_0_0_9px_3px_rgba(27,253,156,0.1)] hover:text-[#82ffc9] hover:shadow-[inset_0_0_10px_rgba(27,253,156,0.6),_0_0_9px_3px_rgba(27,253,156,0.2)]">
+         Get it now
+         <span class="absolute left-[-4em] top-0 w-[4em] h-full transition-transform duration-400 ease-in-out bg-gradient-to-r from-transparent via-[rgba(27,253,156,0.1)] to-transparent group-hover:transform translate-x-[15em]"></span>
+     </button>
+     
         )}
       </div>
     </div>
