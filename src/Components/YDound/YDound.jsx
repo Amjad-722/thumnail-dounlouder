@@ -63,9 +63,9 @@ const YDound = () => {
         {thumbnailUrl && (
          <button
          onClick={downloadThumbnail}
-         className="relative text-[15px] px-[2.7em] py-[0.7em] tracking-[0.06em] font-inherit  rounded-[0.6em] bg-black overflow-hidden transition-all duration-300 leading-[1.4em] border-2 border-[#1BFD9C] text-[#1BFD9C] bg-gradient-to-r from-[rgba(27,253,156,0.1)] via-transparent to-[rgba(27,253,156,0.1)] mt-4 hover:text-[#82ffc9] hover:shadow-[inset_0_0_10px_rgba(27,253,156,0.6),_0_0_9px_3px_rgba(27,253,156,0.2)]">
-         Get it now
-         <span className="absolute left-[-4em] top-0 w-[4em] h-full transition-transform duration-400 ease-in-out bg-gradient-to-r from-transparent via-[rgba(27,253,156,0.1)] to-transparent group-hover:transform translate-x-[15em]"></span>
+         className="bg-gradient-to-bl from-pink-700 to-purple-900 text-white"
+        >
+          Get full Thumbnail
      </button>
      
         )}
