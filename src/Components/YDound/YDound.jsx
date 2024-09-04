@@ -43,7 +43,7 @@ const YDound = () => {
           value={videoUrl}
           onChange={(e) => setVideoUrl(e.target.value)}
           placeholder="Enter YouTube Video URL"
-          className=" p-2 border-2 border-gray-300  hover:border-pink-700 rounded mb-4 bg-gradient-to-r from-blue-500 to-red-500 text-white px-4 py-2 text-xl  font-medium "
+          className=" p-2 border-2 border-gray-300  hover:border-pink-700 rounded mb-4 bg-gradient-to-r from-blue-500 to-red-500 text-white px-4 py-2 text-xl  font-medium placeholder-white"
         />
         {thumbnailUrl && (
           <div className="mb-4">
@@ -56,7 +56,7 @@ const YDound = () => {
         )}
         <button
           onClick={getThumbnail}
-          className="bg-gradient-to-b from-blue-500 to-red-500 text-white px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate"
+          className="bg-gradient-to-b from-blue-500 to-red-500 text-white px-4 py-2 text-xl rounded-xl font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate"
         >
           Get Thumbnail
         </button>
