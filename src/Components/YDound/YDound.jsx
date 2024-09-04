@@ -63,7 +63,7 @@ const YDound = () => {
         {thumbnailUrl && (
          <button
          onClick={downloadThumbnail}
-         className="bg-gradient-to-bl from-pink-700 to-purple-900 text-white"
+         className="bg-gradient-to-bl from-pink-700 to-purple-900 text-white px-4 py-2 text-xl rounded-xl font-medium mt-4"
         >
           Get full Thumbnail
      </button>
